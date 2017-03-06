@@ -1,6 +1,6 @@
-FROM gliderlabs/alpine:3.4
+FROM alpine:3.5
 
-RUN apk-install squid python
+RUN apk add --no-cache squid python
 
 COPY data/squid.conf /etc/squid/squid.conf
 COPY data/run.sh /run.sh
